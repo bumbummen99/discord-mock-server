@@ -1,6 +1,6 @@
 import express, { Express } from 'express';
 import { MockGateway } from '../gateway/MockGateway';
-import { Server } from 'node:http';
+import { Server } from 'node:https';
 import { channelRoutes } from './routes/channel';
 import { gatewayRoutes } from './routes/gateway';
 import { DataStore } from '../DataStore';
