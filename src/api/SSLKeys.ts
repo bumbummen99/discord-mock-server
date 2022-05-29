@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 
-export default {
+export default const {
   key: `-----BEGIN PRIVATE KEY-----
 MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDLhJZowkKWZ1Jp
 4xw47hb2GfjgW4YV327pgOFMXUWhTSAUWymZQtbJBs7EMoPIG2RUMmvTNbf6N6D1
