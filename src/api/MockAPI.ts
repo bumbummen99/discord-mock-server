@@ -5,7 +5,7 @@ import { channelRoutes } from './routes/channel';
 import { gatewayRoutes } from './routes/gateway';
 import { DataStore } from '../DataStore';
 import { interactionRouter } from './routes/interaction';
-import { key, cert } from './SSLKeys'
+import SSLConfig from './SSLConfig'
 
 /**
  * Represents a mocked version of the discord API
@@ -45,10 +45,7 @@ export class MockAPI {
    */
   public async start() {
     return new Promise<void>((resolve) => {
-      this.restServer = this.restApplication.listen({
-        key: key,
-        cert: cert
-      }, 3000, resolve);
+      this.restServer = this.restApplication.listen(SSLConfig, 3000, resolve);
     });
   }
 
