@@ -1,5 +1,5 @@
 {
-  "name": "discord-mock-server",
+  "name": "mock-discord-server",
   "version": "0.1.0",
   "description": "A mock server for stubbing out the discord gateway api.",
   "main": "./dist/index.js",
