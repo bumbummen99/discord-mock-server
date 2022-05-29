@@ -21,7 +21,7 @@ export class MockAPI {
    * @param store The data store used to store in-memory data
    * @param version The API version to use
    */
-  constructor(gatewayServer: MockGateway, store: DataStore, version = 10) {
+  constructor(gatewayServer: MockGateway, store: DataStore, version = 9) {
     this.restApplication = express();
     this.gatewayServer = gatewayServer;
     this.restApplication.use(
