@@ -48,5 +48,5 @@ oGJrJQlsTAKX8u+45l3ueQSsEzEPsRNZLpwdysK3kEA6wcKvL+iqzNf5mjuz/VYt
 A5R1ugigEPVKz2Dfhcy2qFbbM9rmdt+EivRyBbvAsyAmk7i5qjf9JhhNTaNume7r
 HC/KWfhAqp5Y03PajmSMBpHP7dGi5F2z9fyiyxqWAYT5YHEmHsNKrwBLo5m+0Rps
 iiqkKrWkqB+oZd+8bXblQ5wu
------END CERTIFICATE-----`
-}
+-----END CERTIFICATE-----`,
+};

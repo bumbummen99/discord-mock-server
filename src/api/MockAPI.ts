@@ -1,6 +1,6 @@
 import express, { Express } from 'express';
 import { MockGateway } from '../gateway/MockGateway';
-import { Server } from 'node:https';
+import { Server, createServer } from 'node:https';
 import { channelRoutes } from './routes/channel';
 import { gatewayRoutes } from './routes/gateway';
 import { DataStore } from '../DataStore';
@@ -45,7 +45,7 @@ export class MockAPI {
    */
   public async start() {
     return new Promise<void>((resolve) => {
-      this.restServer = this.restApplication.listen(SSLConfig, 3000, resolve);
+      this.restServer = createServer(SSLConfig, this.restApplication).listen(3000, resolve);
     });
   }
 
