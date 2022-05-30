@@ -1,5 +1,5 @@
-import {NextFunction, Request, Response} from 'express';
-import {MockGateway} from '../../gateway/MockGateway';
+import { Request, Response } from 'express';
+import { MockGateway } from '../../gateway/MockGateway';
 
 export class GatewayController {
   private gateway: MockGateway;

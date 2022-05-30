@@ -1,7 +1,7 @@
-import {assert} from '@japa/assert';
-import {apiClient} from '@japa/api-client';
-import {specReporter} from '@japa/spec-reporter';
-import {processCliArgs, configure, run} from '@japa/runner';
+import { assert } from '@japa/assert';
+import { apiClient } from '@japa/api-client';
+import { specReporter } from '@japa/spec-reporter';
+import { processCliArgs, configure, run } from '@japa/runner';
 
 process.env.NODE_ENV = 'test';
 

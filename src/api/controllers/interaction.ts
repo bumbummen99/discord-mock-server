@@ -1,4 +1,4 @@
-import {NextFunction, Request, Response} from 'express';
+import { Request, Response } from 'express';
 
 export class InteractionController {
   commandsCallback(req: Request, res: Response) {

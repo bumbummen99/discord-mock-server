@@ -5,8 +5,8 @@ import {
   GatewayDispatchEvents,
   GatewayOpcodes,
 } from 'discord-api-types/v9';
-import {RawData, Server, ServerOptions, WebSocket} from 'ws';
-import {DataStore} from '../DataStore';
+import { RawData, Server, ServerOptions, WebSocket } from 'ws';
+import { DataStore } from '../DataStore';
 
 /**
  * Creates an gateway-compatible dispatch payload
@@ -19,7 +19,7 @@ export function createDispatchData(
 ) {
   return {
     t: event,
-    d: {...data},
+    d: { ...data },
   };
 }
 
@@ -78,7 +78,7 @@ export class MockGateway {
     this.guilds.forEach(guild => {
       client.send(
         JSON.stringify(
-          createDispatchData(GatewayDispatchEvents.GuildCreate, {...guild})
+          createDispatchData(GatewayDispatchEvents.GuildCreate, { ...guild })
         )
       );
     });
@@ -101,7 +101,7 @@ export class MockGateway {
   }
 
   private ACKHeartBeat(client: WebSocket) {
-    client.send(JSON.stringify({op: 11}));
+    client.send(JSON.stringify({ op: 11 }));
   }
 
   private handleMessage(client: WebSocket, payload: RawData) {
