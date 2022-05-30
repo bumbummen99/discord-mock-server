@@ -24,7 +24,7 @@ test.group('Maths.add', group => {
   test('It allows for commands to be registered', async ({client}) => {
     // Test logic goes here
     const response = await client
-      .get('https://localhost:3000/v9/applications/12345/guilds/54321/commands')
+      .post('https://localhost:3000/v9/applications/12345/guilds/54321/commands')
       .trustLocalhost();
 
     response.assertStatus(203);
