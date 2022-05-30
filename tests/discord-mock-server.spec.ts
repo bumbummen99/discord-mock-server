@@ -14,7 +14,7 @@ test.group('Maths.add', (group) => {
 
   test('It does serve the gateway', async ({assert, client}) => {
     // Test logic goes here
-    const response = await client.get('https://localhost:3000/v9/gateway/bot');
+    const response = await client.get('https://localhost:3000/v9/gateway/bot').trustLocalhost();
     assert.equal(response.status(), 200);
   });
 });
