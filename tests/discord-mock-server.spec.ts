@@ -12,11 +12,21 @@ test.group('Maths.add', group => {
     await mockServer.stop();
   });
 
-  test('It does serve the gateway', async ({assert, client}) => {
+  test('It does serve the gateway', async ({client}) => {
     // Test logic goes here
     const response = await client
       .get('https://localhost:3000/v9/gateway/bot')
       .trustLocalhost();
-    assert.equal(response.status(), 200);
+
+    response.assertStatus(200);
+  });
+
+  test('It allows for commands to be registered', async ({client}) => {
+    // Test logic goes here
+    const response = await client
+      .get('https://localhost:3000/v9/applications/12345/guilds/54321/commands')
+      .trustLocalhost();
+
+    response.assertStatus(203);
   });
 });
