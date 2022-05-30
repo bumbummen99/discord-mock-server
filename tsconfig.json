@@ -8,8 +8,7 @@
     "moduleResolution": "node"
   },
   "include": [
-    "src/**/*.ts",
-    "test/**/*.ts"
+    "src/**/*.ts"
   ],
   "ts-node": {
     "transpileOnly": true
