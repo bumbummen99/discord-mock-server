@@ -1,8 +1,8 @@
 {
   "name": "mock-discord-server",
   "description": "A mock server for stubbing out the discord gateway api.",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./build/src/index.js",
+  "types": "./build/src/index.d.ts",
   "scripts": {
     "lint": "gts lint",
     "clean": "gts clean",
