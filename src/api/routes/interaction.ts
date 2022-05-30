@@ -9,6 +9,11 @@ interactionRouter.post(
   interactionController.commandsCallback
 );
 
+interactionRouter.put(
+  '/applications/:applicationId/guilds/:guildId/commands',
+  interactionController.commandsCallback
+);
+
 interactionRouter.post(
   '/interactions/:interactionId/:interactionToken/callback',
   interactionController.interactionCallback
