@@ -4,7 +4,8 @@
     "rootDir": ".",
     "outDir": "build",
     "module": "ES2020",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "node"
   },
   "include": [
     "src/**/*.ts",
