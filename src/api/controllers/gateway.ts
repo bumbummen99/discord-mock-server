@@ -1,5 +1,5 @@
-import {NextFunction, Request, Response} from 'express';
-import {MockGateway} from '../../gateway/MockGateway';
+import { Request, Response } from 'express';
+import { MockGateway } from '../../gateway/MockGateway';
 
 export class GatewayController {
   private gateway: MockGateway;
@@ -8,7 +8,7 @@ export class GatewayController {
     this.gateway = gateway;
   }
 
-  public getGatewayBot(req: Request, res: Response, next: NextFunction) {
+  public getGatewayBot(req: Request, res: Response) {
     res.send({
       url: `ws://${this.gateway.WSURL}`,
       shards: 1,

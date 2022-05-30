@@ -1,8 +1,7 @@
-import {Routes} from 'discord-api-types/v9';
-import {Router} from 'express';
-import {DataStore} from '../../DataStore';
-import {MockGateway} from '../../gateway/MockGateway';
-import {ChannelController} from '../controllers/channel';
+import { Router } from 'express';
+import { DataStore } from '../../DataStore';
+import { MockGateway } from '../../gateway/MockGateway';
+import { ChannelController } from '../controllers/channel';
 
 export function channelRoutes(gateway: MockGateway, store: DataStore) {
   const channelRouter = Router();

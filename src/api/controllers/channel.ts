@@ -1,6 +1,5 @@
-import {NextFunction, Request, Response} from 'express';
-import {DataStore} from '../../DataStore';
-import {MockGateway} from '../../gateway/MockGateway';
+import { DataStore } from '../../DataStore';
+import { MockGateway } from '../../gateway/MockGateway';
 
 export class ChannelController {
   private gateway: MockGateway;
@@ -11,11 +10,11 @@ export class ChannelController {
     this.store = store;
   }
 
-  public getMessage(req: Request, res: Response, next: NextFunction) {
+  public getMessage() {
     return {};
   }
 
-  public createMessage(req: Request, res: Response, next: NextFunction) {
+  public createMessage() {
     return;
   }
 }

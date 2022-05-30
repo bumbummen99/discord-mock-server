@@ -3,13 +3,13 @@
   "compilerOptions": {
     "rootDir": ".",
     "outDir": "build",
-    "module": "ES2020",
+    "module": "CommonJS",
+    "target": "ES2015",
     "esModuleInterop": true,
     "moduleResolution": "node"
   },
   "include": [
-    "src/**/*.ts",
-    "test/**/*.ts"
+    "src/**/*.ts"
   ],
   "ts-node": {
     "transpileOnly": true

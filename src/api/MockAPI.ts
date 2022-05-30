@@ -1,10 +1,10 @@
-import express, {Express} from 'express';
-import {MockGateway} from '../gateway/MockGateway';
-import {Server, createServer} from 'node:https';
-import {channelRoutes} from './routes/channel';
-import {gatewayRoutes} from './routes/gateway';
-import {DataStore} from '../DataStore';
-import {interactionRouter} from './routes/interaction';
+import express, { Express } from 'express';
+import { MockGateway } from '../gateway/MockGateway';
+import { Server, createServer } from 'node:https';
+import { channelRoutes } from './routes/channel';
+import { gatewayRoutes } from './routes/gateway';
+import { DataStore } from '../DataStore';
+import { interactionRouter } from './routes/interaction';
 import SSLConfig from './SSLConfig';
 
 /**
