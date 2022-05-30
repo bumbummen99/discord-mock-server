@@ -27,6 +27,6 @@ test.group('Maths.add', group => {
       .post('https://localhost:3000/v9/applications/12345/guilds/54321/commands')
       .trustLocalhost();
 
-    response.assertStatus(203);
+    response.assertStatus(204);
   });
 });
