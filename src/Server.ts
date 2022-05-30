@@ -1,6 +1,6 @@
-import { MockAPI } from './api/MockAPI';
-import { DataStore } from './DataStore';
-import { MockGateway, MockGatewayOptions } from './gateway/MockGateway';
+import {MockAPI} from './api/MockAPI';
+import {DataStore} from './DataStore';
+import {MockGateway, MockGatewayOptions} from './gateway/MockGateway';
 
 export interface MockServerOptions {
   /**

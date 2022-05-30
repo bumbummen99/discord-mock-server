@@ -5,8 +5,8 @@ import {
   GatewayDispatchEvents,
   GatewayOpcodes,
 } from 'discord-api-types/v9';
-import { RawData, Server, ServerOptions, WebSocket } from 'ws';
-import { DataStore } from '../DataStore';
+import {RawData, Server, ServerOptions, WebSocket} from 'ws';
+import {DataStore} from '../DataStore';
 
 /**
  * Creates an gateway-compatible dispatch payload
@@ -19,7 +19,7 @@ export function createDispatchData(
 ) {
   return {
     t: event,
-    d: { ...data },
+    d: {...data},
   };
 }
 
@@ -61,9 +61,9 @@ export class MockGateway {
     this.store = store;
 
     // Setup handling.
-    this.server.on('connection', (client) => {
+    this.server.on('connection', client => {
       this.handleNewConnection(client);
-      this.client.on('message', (m) => this.handleMessage(client, m));
+      this.client.on('message', m => this.handleMessage(client, m));
     });
   }
 
@@ -75,10 +75,10 @@ export class MockGateway {
   }
 
   private sendGuilds(client: WebSocket) {
-    this.guilds.forEach((guild) => {
+    this.guilds.forEach(guild => {
       client.send(
         JSON.stringify(
-          createDispatchData(GatewayDispatchEvents.GuildCreate, { ...guild })
+          createDispatchData(GatewayDispatchEvents.GuildCreate, {...guild})
         )
       );
     });
@@ -101,7 +101,7 @@ export class MockGateway {
   }
 
   private ACKHeartBeat(client: WebSocket) {
-    client.send(JSON.stringify({ op: 11 }));
+    client.send(JSON.stringify({op: 11}));
   }
 
   private handleMessage(client: WebSocket, payload: RawData) {
@@ -138,17 +138,14 @@ export class MockGateway {
     data: Record<string, unknown>
   ) {
     return new Promise<void>((resolve, reject) => {
-      this.client.send(
-        JSON.stringify(createDispatchData(event, data)),
-        (err) => {
-          if (err) {
-            reject(err);
-            return;
-          }
-
-          resolve();
+      this.client.send(JSON.stringify(createDispatchData(event, data)), err => {
+        if (err) {
+          reject(err);
+          return;
         }
-      );
+
+        resolve();
+      });
     });
   }
 
@@ -157,7 +154,7 @@ export class MockGateway {
    */
   public async close() {
     return new Promise<void>((resolve, reject) => {
-      this.server.close((err) => {
+      this.server.close(err => {
         if (err) {
           return reject(err);
         }

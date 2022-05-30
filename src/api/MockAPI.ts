@@ -1,11 +1,11 @@
-import express, { Express } from 'express';
-import { MockGateway } from '../gateway/MockGateway';
-import { Server, createServer } from 'node:https';
-import { channelRoutes } from './routes/channel';
-import { gatewayRoutes } from './routes/gateway';
-import { DataStore } from '../DataStore';
-import { interactionRouter } from './routes/interaction';
-import SSLConfig from './SSLConfig'
+import express, {Express} from 'express';
+import {MockGateway} from '../gateway/MockGateway';
+import {Server, createServer} from 'node:https';
+import {channelRoutes} from './routes/channel';
+import {gatewayRoutes} from './routes/gateway';
+import {DataStore} from '../DataStore';
+import {interactionRouter} from './routes/interaction';
+import SSLConfig from './SSLConfig';
 
 /**
  * Represents a mocked version of the discord API
@@ -44,8 +44,11 @@ export class MockAPI {
    * Starts the mock API
    */
   public async start() {
-    return new Promise<void>((resolve) => {
-      this.restServer = createServer(SSLConfig, this.restApplication).listen(3000, resolve);
+    return new Promise<void>(resolve => {
+      this.restServer = createServer(SSLConfig, this.restApplication).listen(
+        3000,
+        resolve
+      );
     });
   }
 
@@ -58,7 +61,7 @@ export class MockAPI {
         return resolve();
       }
 
-      this.restServer.close((err) => {
+      this.restServer.close(err => {
         if (err) {
           return reject(err);
         }

@@ -1,6 +1,6 @@
-import { NextFunction, Request, Response } from 'express';
-import { DataStore } from '../../DataStore';
-import { MockGateway } from '../../gateway/MockGateway';
+import {NextFunction, Request, Response} from 'express';
+import {DataStore} from '../../DataStore';
+import {MockGateway} from '../../gateway/MockGateway';
 
 export class ChannelController {
   private gateway: MockGateway;

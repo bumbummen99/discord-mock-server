@@ -14,9 +14,7 @@ export class DataStore {
 
   public addGuild(guild: APIGuild) {
     this.guilds.set(guild.id, guild);
-    guild.channels?.forEach((channel) =>
-      this.channels.set(channel.id, channel)
-    );
+    guild.channels?.forEach(channel => this.channels.set(channel.id, channel));
   }
 
   public addChannel(channel: APIGuildChannel<ChannelType>) {

@@ -21,4 +21,4 @@ deploy/deploy_key
 deploy/deploy_key.pub
 
 # Dist
-dist/
+build/
