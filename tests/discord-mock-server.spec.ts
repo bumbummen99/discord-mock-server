@@ -33,9 +33,7 @@ test.group('Maths.add', group => {
 
     // Test logic goes here
     const response2 = await client
-      .put(
-        'https://localhost:3000/v9/applications/12345/guilds/54321/commands'
-      )
+      .put('https://localhost:3000/v9/applications/12345/guilds/54321/commands')
       .trustLocalhost();
 
     response2.assertStatus(204);
