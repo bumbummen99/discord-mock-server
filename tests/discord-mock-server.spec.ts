@@ -32,12 +32,12 @@ test.group('Maths.add', group => {
     response.assertStatus(204);
 
     // Test logic goes here
-    const response = await client
+    const response2 = await client
       .put(
         'https://localhost:3000/v9/applications/12345/guilds/54321/commands'
       )
       .trustLocalhost();
 
-    response.assertStatus(204);
+    response2.assertStatus(204);
   });
 });
