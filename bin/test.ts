@@ -1,9 +1,9 @@
-import { assert } from '@japa/assert'
-import { apiClient } from '@japa/api-client'
-import { specReporter } from '@japa/spec-reporter'
-import { processCliArgs, configure, run } from '@japa/runner'
+import {assert} from '@japa/assert';
+import {apiClient} from '@japa/api-client';
+import {specReporter} from '@japa/spec-reporter';
+import {processCliArgs, configure, run} from '@japa/runner';
 
-process.env.NODE_ENV = 'test'
+process.env.NODE_ENV = 'test';
 
 /*
 |--------------------------------------------------------------------------
@@ -22,11 +22,11 @@ configure({
   ...processCliArgs(process.argv.slice(2)),
   ...{
     files: ['tests/**/*.spec.ts'],
-    plugins: [assert(), apiClient('http://localhost:3333')],
+    plugins: [assert(), apiClient('https://localhost:3000')],
     reporters: [specReporter()],
-    importer: (filePath) => import(filePath),
+    importer: filePath => import(filePath),
   },
-})
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +36,4 @@ configure({
 | The following "run" method is required to execute all the tests.
 |
 */
-run()
+run();

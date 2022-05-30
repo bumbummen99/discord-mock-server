@@ -1,8 +1,8 @@
-import { Routes } from 'discord-api-types/v9';
-import { Router } from 'express';
-import { DataStore } from '../../DataStore';
-import { MockGateway } from '../../gateway/MockGateway';
-import { ChannelController } from '../controllers/channel';
+import {Routes} from 'discord-api-types/v9';
+import {Router} from 'express';
+import {DataStore} from '../../DataStore';
+import {MockGateway} from '../../gateway/MockGateway';
+import {ChannelController} from '../controllers/channel';
 
 export function channelRoutes(gateway: MockGateway, store: DataStore) {
   const channelRouter = Router();
@@ -13,7 +13,7 @@ export function channelRoutes(gateway: MockGateway, store: DataStore) {
     '/channels/channelId/messages/:messageId',
     controller.getMessage
   );
-  channelRouter.post(`/channels/:channelId/messages`);
+  channelRouter.post('/channels/:channelId/messages');
 
   return channelRouter;
 }
