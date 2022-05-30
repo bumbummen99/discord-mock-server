@@ -22,7 +22,7 @@ export class MockAPI {
    * @param version The API version to use
    */
   constructor(gatewayServer: MockGateway, store: DataStore, version = 9) {
-    this.restApplication = express();
+    this.restApplication = express()
     this.gatewayServer = gatewayServer;
     this.restApplication.use(
       `/v${version}`,

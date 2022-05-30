@@ -1,7 +1,7 @@
-import express from 'express';
+import { Router } from 'express';
 import { InteractionController } from '../controllers/interaction';
 
-const interactionRouter = express.Router();
+const interactionRouter = Router();
 const interactionController = new InteractionController();
 
 interactionRouter.post(

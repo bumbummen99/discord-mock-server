@@ -1,9 +1,9 @@
 import { MockGateway } from '../../gateway/MockGateway';
 import { GatewayController } from '../controllers/gateway';
-import express from 'express';
+import { Router } from 'express';
 
 export function gatewayRoutes(gateway: MockGateway) {
-  const gatewayRouter = express.Router();
+  const gatewayRouter = Router();
   const gatewayController = new GatewayController(gateway);
 
   gatewayRouter.get('/gateway/bot', (req, res, next) => {
